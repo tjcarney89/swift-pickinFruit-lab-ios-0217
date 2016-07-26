@@ -10,7 +10,6 @@ import Foundation
 
 struct Constants {
     
-    static let FRUIT_PICKER = "Fruit Picker"
     static let SPIN_BUTTON = "Spin Button"
     
 }
