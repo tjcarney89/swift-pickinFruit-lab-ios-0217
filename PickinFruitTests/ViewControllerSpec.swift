@@ -23,13 +23,12 @@ class ViewControllerSpec: QuickSpec {
             
             it("should say 'TRY AGAIN' when you do not get three of the same fruit across the spinner") {
                 
-                let pickerView = tester.waitForViewWithAccessibilityLabel(Constants.FRUIT_PICKER) as! UIPickerView
                 let appDelegate = UIApplication.sharedApplication().delegate
                 let vc = appDelegate!.window!?.rootViewController as! ViewController
                 
                 vc.fruitsArray = (0..<26).map({String(UnicodeScalar("a".unicodeScalars.first!.value + $0))})
                 
-                pickerView.reloadAllComponents()
+                vc.fruitPicker.reloadAllComponents()
                 
                 tester.waitForTimeInterval(3.0)
                 
@@ -44,13 +43,12 @@ class ViewControllerSpec: QuickSpec {
             
             it("should say 'WINNER!' when you do get three of the same fruit across the spinner") {
                 
-                let pickerView = tester.waitForViewWithAccessibilityLabel(Constants.FRUIT_PICKER) as! UIPickerView
                 let appDelegate = UIApplication.sharedApplication().delegate
                 let vc = appDelegate!.window!?.rootViewController as! ViewController
                 
                 vc.fruitsArray = ["a"]
                 
-                pickerView.reloadAllComponents()
+                vc.fruitPicker.reloadAllComponents()
                 
                 tester.waitForTimeInterval(3.0)
                 
