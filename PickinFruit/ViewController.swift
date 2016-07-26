@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // self.fruitPicker.accessibilityLabel = Constants.FRUIT_PICKER
         self.spinButton.accessibilityLabel = Constants.SPIN_BUTTON
         
     }

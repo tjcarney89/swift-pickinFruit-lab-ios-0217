@@ -11,7 +11,7 @@ In this lab you will use `UIPickerView` to make a slot game called, 'Pickin Frui
 
 ### 1. Implement the delegate protocols on the picker view
 ---
- * Create an outlet property for your picker view called `fruitPicker` (Be sure to uncomment the accessibility label declaration for `fruitPicker` in `viewDidLoad()`).
+ * Create an outlet property for your picker view called `fruitPicker`.
  * Implement the **2** necessary data source delegate methods to provide data to the picker view. The picker view should have **3** components.
  * Implement the `pickerView(_:titleForRow:forComponent:)` method to set the title from the strings within the array.
 
