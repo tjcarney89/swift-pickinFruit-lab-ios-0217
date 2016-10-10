@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-PickinFruitUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Quick.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,11 +32,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3EA6435C67F9C8AE99A45E9F1CEDA4FB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>40FF1C77152F384080A1A02E90A36DA9</key>
 		<dict>
 			<key>primary</key>
@@ -52,17 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>535131CDF6F2C39C4D2E535BF3FD879C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6026032B3297DA17A69F548FDD5840C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>AF65AE0CBA32C41AD8F8581DC025A7C7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C4B626F99CE43C4E7F967B3DA5EE188F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

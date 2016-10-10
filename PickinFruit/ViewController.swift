@@ -35,19 +35,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return self.numberOfComponents
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.numberOfRows
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return self.fruitsArray[row % self.fruitsArray.count]
     }
     
-    @IBAction func spinButtonTapped(sender: UIButton) {
+    @IBAction func spinButtonTapped(_ sender: UIButton) {
         
         pickSomeFruit()
         
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickSomeFruit() {
         
         
-        self.spinButton.userInteractionEnabled = false
+        self.spinButton.isUserInteractionEnabled = false
         
         for i in 0..<self.numberOfComponents {
             
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         for i in 0..<self.numberOfComponents {
             
-            let row = self.fruitPicker.selectedRowInComponent(i) % self.fruitsArray.count
+            let row = self.fruitPicker.selectedRow(inComponent: i) % self.fruitsArray.count
             results[self.fruitsArray[row]] = true
             
         }
@@ -99,7 +99,7 @@ extension ViewController {
     func configureButton()
     {
         self.spinButton.layer.cornerRadius = 0.5 * self.spinButton.bounds.size.width
-        self.spinButton.layer.borderColor = UIColor.whiteColor().CGColor
+        self.spinButton.layer.borderColor = UIColor.white.cgColor
         self.spinButton.layer.borderWidth = 4.0
         self.spinButton.clipsToBounds = true
     }
@@ -109,24 +109,24 @@ extension ViewController {
 // MARK: Animations
 extension ViewController {
     
-    func animateResultsLabelWith(text: String) {
+    func animateResultsLabelWith(_ text: String) {
         
         self.resultLabel.text = text
         
-        UIView.animateWithDuration(0.2, delay: 0.3, options: .CurveEaseIn, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0.3, options: .curveEaseIn, animations: {
             
             self.resultLabel.alpha = 1
             
         }) { _ in
             
-            UIView.animateWithDuration(0.25, delay: 0, options: [.Autoreverse, .Repeat], animations: {
+            UIView.animate(withDuration: 0.25, delay: 0, options: [.autoreverse, .repeat], animations: {
                 UIView.setAnimationRepeatCount(2.5)
                 
                 self.resultLabel.alpha = 0
                 
                 }, completion: { _ in
                     
-                    self.spinButton.userInteractionEnabled = true
+                    self.spinButton.isUserInteractionEnabled = true
             })
             
         }
